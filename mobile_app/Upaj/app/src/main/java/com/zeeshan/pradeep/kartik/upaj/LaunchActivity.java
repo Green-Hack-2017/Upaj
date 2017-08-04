@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class LaunchActivity extends AppCompatActivity {
 
 
-    private static final int AADHAR_NO_LENGTH = 16;
+    private static final int AADHAR_NO_LENGTH = 2;
     EditText mAadharEditText;
     Button mProceedButton;
 

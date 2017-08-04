@@ -10,9 +10,12 @@
 
     <ImageView
         android:id="@+id/iv_splash"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/splash_upaj">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/splash_upaj"
+        android:scaleType="center">
+
     </ImageView>
 
 </RelativeLayout>
