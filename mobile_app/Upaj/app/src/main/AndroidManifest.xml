@@ -5,6 +5,7 @@
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +17,10 @@
         <activity android:name=".LaunchActivity">
 
         </activity>
+        android:exported="true">
         <activity android:name=".OTPActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+        </activity>
         <activity android:name=".Splash_upaj">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
