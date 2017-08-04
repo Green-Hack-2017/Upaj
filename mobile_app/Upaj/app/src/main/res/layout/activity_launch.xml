@@ -31,14 +31,18 @@
     <EditText
         android:id="@+id/aadharEditText"
         android:layout_width="200dp"
-        android:layout_height="16dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
+        android:background="@android:color/background_light"
         android:hint="enter Aadhar no."
         android:inputType="textCapCharacters"
-        android:textColor="@color/colorAccent"
-        />
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+
+
+        android:textColorLink="@color/colorPrimaryDark" />
 
     <Button
         android:id="@+id/proceedButton"

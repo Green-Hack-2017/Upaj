@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.zeeshan.pradeep.kartik.upaj.OTPActivity">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/otp_background">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/otpEditText"
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:hint="enter OTP"
+        android:inputType="textCapCharacters"
+        android:textColor="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/otpSubmitButton"
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:hint="enter Aadhar no."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        />
+
+</RelativeLayout>
