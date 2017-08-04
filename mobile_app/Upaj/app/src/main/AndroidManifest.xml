@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zeeshan.pradeep.kartik.upaj">
 
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
@@ -14,13 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LaunchActivity">
-
-        </activity>
+        <activity android:name=".LaunchActivity"></activity>
         android:exported="true">
         <activity android:name=".OTPActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Splash_upaj">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FilingReportActivity"></activity>
     </application>
 
 </manifest>
