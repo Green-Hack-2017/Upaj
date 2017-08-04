@@ -23,19 +23,37 @@ public class ViewPagerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        View view = inflater.inflate(R.layout.fragment_viewpager,container,false);
+
+        final ReportFragment reportFragment = new ReportFragment();
+        final NewsFeedFragment newsFeedFragment = new NewsFeedFragment();
+        final HelpFragment helpFragment = new HelpFragment();
+
         //when we are dealing with fragments within frgments we need to use childFragmentManager
-        ViewPager viewPager = (ViewPager) getView().findViewById(R.id.viewPager);
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
         viewPager.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-
+                Fragment selection = null;
+                switch (position){
+                    case 0 : selection = reportFragment;break;
+                    case 1 : selection = helpFragment;break;
+                    case 2 : selection = newsFeedFragment;break;
+                }
                 //return position==0 ? ingredientsFragment:directionsFragment;
-                return null;
+                return selection;
             }
 
             @Override
             public CharSequence getPageTitle(int position) {
-                return position==0?"Ingredients":"Directions";
+                String ans = "Upaj" ;
+                switch(position){
+                    case 0 : ans="Report";break;
+                    case 1 : ans="Help";break;
+                    case 2 : ans="News";break;
+                }
+                return ans;
+
             }
 
             @Override
@@ -44,11 +62,11 @@ public class ViewPagerFragment extends Fragment {
             }
         });
 
-        TabLayout tabLayout = (TabLayout) getView().findViewById(R.id.tabLayout);
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
 
-        return getView();
+        return view;
     }
 
 
