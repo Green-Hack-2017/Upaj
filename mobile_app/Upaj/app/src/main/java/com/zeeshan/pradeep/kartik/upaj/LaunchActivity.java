@@ -1,5 +1,6 @@
 package com.zeeshan.pradeep.kartik.upaj;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,7 +49,14 @@ public class LaunchActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * needs to go to OTP activity and do stuff
+     * @param inputText
+     */
     private void authenticateAadhar(String inputText) {
         //TODO:needs to be implemented
+        Intent intent = new Intent(this,OTPActivity.class);
+        startActivity(intent);
+
     }
 }
