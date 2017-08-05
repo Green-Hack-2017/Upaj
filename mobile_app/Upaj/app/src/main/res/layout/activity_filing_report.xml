@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zeeshan.pradeep.kartik.upaj.FilingReportActivity">
+    tools:context="com.zeeshan.pradeep.kartik.upaj.FilingReportActivity"
+    android:orientation="vertical">
 
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/currentPhotoImageView"/>
+        android:layout_height="200dp"
+        android:id="@+id/currentPhotoImageView"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:scaleType="centerInside"
+        />
 
-</ScrollView>
+    <ScrollView
+        android:id="@+id/requestEditText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTintMode="src_in">
+
+
+        <EditText
+            android:id="@+id/problemEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Whats your problem???"
+            android:textStyle="italic"
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Request"
+        android:id="@+id/sendRequestButton"/>
+
+
+</LinearLayout>
