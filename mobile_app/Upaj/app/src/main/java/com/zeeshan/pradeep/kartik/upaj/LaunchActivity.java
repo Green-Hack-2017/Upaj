@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class LaunchActivity extends AppCompatActivity {
 
 
-    private static final int AADHAR_NO_LENGTH = 2;
+    private static final int MOBILE_NO_LENGTH = 10;
     EditText mAadharEditText;
     Button mProceedButton;
 
@@ -23,7 +23,7 @@ public class LaunchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launch);
 
 
-        mAadharEditText = (EditText) findViewById(R.id.aadharEditText);
+        mAadharEditText = (EditText) findViewById(R.id.mobileEditText);
         mProceedButton = (Button) findViewById(R.id.proceedButton);
 
 
@@ -32,13 +32,14 @@ public class LaunchActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String inputText = mAadharEditText.getText().toString();
 
-                if (inputText.length() != AADHAR_NO_LENGTH)
+                if (inputText.length() != MOBILE_NO_LENGTH)
                 {
-                    Toast.makeText(getApplicationContext(), "please enter a proper Aadhaar no", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "please enter a proper mobile no", Toast.LENGTH_SHORT).show();
 
                 }
                 else{
-                    authenticateAadhar(inputText);
+                    ((Upaj) getApplication()).setmMobNo(inputText);
+                    authenticate(inputText);
 
                 }
             }
@@ -53,7 +54,7 @@ public class LaunchActivity extends AppCompatActivity {
      * needs to go to OTP activity and do stuff
      * @param inputText
      */
-    private void authenticateAadhar(String inputText) {
+    private void authenticate(String inputText) {
         //TODO:needs to be implemented
         Intent intent = new Intent(this,OTPActivity.class);
         startActivity(intent);

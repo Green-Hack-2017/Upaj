@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/aadharEditText"
+        android:layout_alignStart="@+id/mobileEditText"
         android:layout_marginTop="49dp"
         android:text="Welcome"
         android:textSize="48sp"
@@ -20,23 +20,23 @@
 
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please enter your AADHAAR number"
-        android:layout_marginBottom="35dp"
-        android:layout_alignBottom="@+id/aadharEditText"
+        android:layout_alignBottom="@+id/mobileEditText"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView2" />
+        android:layout_marginBottom="35dp"
+        android:text="Please enter your Mobile number" />
 
     <EditText
-        android:id="@+id/aadharEditText"
+        android:id="@+id/mobileEditText"
         android:layout_width="200dp"
         android:layout_height="20dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:background="@android:color/background_light"
-        android:hint="enter Aadhar no."
+        android:hint="enter Mobile no."
         android:inputType="textCapCharacters"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
